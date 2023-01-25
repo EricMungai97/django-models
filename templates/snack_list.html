@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Snack List</h1>
+    {% for snack in object_list %}
+        <p><a href="{% url 'detail_view' snack.pk %}">{{ snack.name }}</a></p>
+    {% endfor %}
+{% endblock content %}
